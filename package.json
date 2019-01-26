@@ -1,0 +1,11 @@
+{
+  "name": "internet-diet",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "pdf": "mdx-deck pdf deck.mdx"
+  },
+  "devDependencies": {
+    "mdx-deck": "^1.8.2"
+  }
+}
