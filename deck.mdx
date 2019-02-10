@@ -1,5 +1,6 @@
 import { Image } from 'mdx-deck'
 import { Head } from 'mdx-deck'
+import { Appear } from 'mdx-deck'
 
 export { default as theme } from './theme'
 
@@ -52,4 +53,446 @@ UI Engineer at Holaluz (👋💡)
 # Adrià Fontcuberta
 @afontcu_
 
-Webmaster
+Webmaster at Holaluz (👋💡)
+
+---
+
+What do we understand by "obesity crisis" or "page bloating"?
+
+```notes
+Entendemos páginas que son prácticamente de texto, para leer algo, consultar 
+información. No hablamos de aplicaciones web complejas (que también daría para
+una charla), sinó del internet público, que debería ser accesible para todo el
+mundo (de forma literal).
+Hablamos de blogs, webs institucionales, páginas de producto, webs corporativas... 
+en fin, ya véis. El 90% de internet (por decir algo).
+```
+
+---
+
+Hold on, Adri... is it that bad?
+
+```notes
+Osea, ¿hay para tanto? ¿Hay como para dar una charla en el t3chfest sobre el
+tema?
+
+Eeehhh... sí.
+Igual se entiende mejor con algunos ejemplos.
+```
+
+---
+
+(Saw image. let's play a game)
+
+```notes
+Y la verdad es que me lo he pasado en grande preparando esta charla, eh? Una
+de las cosas que mas me han gustado son los artículos catastróficos sobre lo
+importante e imprescindible que es tener una web optimizada...sin estar optimizados
+
+De hecho, se me ocurrió incluso la idea de un juego. ¿Qué pesa más? Ya verás, 
+vamos a jugar.
+
+Tengo la idea de crear este juego de verdad (hecho con 500 librerías de JS, claro)
+y publicarlo. Ya os avisaré.
+```
+
+---
+
+# Who fed the Internet?
+
+```notes
+¿Por qué hemos llegado aquí? ¿Quién o quiénes son responsables de esta situación?
+```
+
+---
+
+## Us (devs and designers and product owners and...)
+
+---
+
+We **love** complexity.
+
+```notes
+Nos encaaaaanta hacernos la vida complicada. Diremos el contrario, diremos que 
+ponemos al usuario en el centro, y que si hemos elegido el último framework de JS
+es porque es la mejor forma de entregar valor y escalar nuestra aplicación y que
+blablabla.
+
+Y oye, seguramente es verdad. Pero nos encanta estar a la moda. Cuántas más siglas
+use un proyecto, más mola. 
+```
+
+---
+
+Hype Driven Development
+
+Ego Driven Development
+
+
+```notes
+Y luego está lo del ego, claro. Y el currículum. De que sirve hacer una web con
+JS a pelo (o ese framework tan bueno, Vanilla JS)? Cómo vas a poner eso? Lo importante
+de un proyecto es que pueda añadir, por lo menos, un par de siglas más en nuestro
+currículum o en la bio de Twitter.
+
+Tienes una aplicación con 20 usuarios? Yo metería un cluster de kubernetes, y un
+microservicio por usuario. A tomar por saco. Tus backends han preparado un endpoint
+que devuelve una lista de productos? Pues pídeles que se lo carguen todo y lo 
+hagan en GraphQL, que parece que vivan en 2017.
+```
+
+---
+
+(hero image)
+
+```notes
+Ojo, que esto vale igualito para la gente de diseño. 
+Este chiste no es mío, es de Hayden Pickering, pero lo voy a contar igual.
+¿Sabéis por qué a esas imágenes de cabecera se les llaman "Hero Images"?
+Porque es lo que dice el usuario cuando entra a tu web desde su móvil.
+"Joder, me acabas de hacer descargar una imagen inútil de 500kbs desde el móvil.
+Eres mi puto heroe".
+```
+
+---
+
+Complexity is good for:
+
+<Appear>
+  Making people believe they can't do your job.
+</Appear>
+
+---
+
+Simplicity is good for:
+
+<Appear>
+  Everything else.
+</Appear>
+
+---
+
+"fake simplicity"
+
+```notes
+luego están esas webs que "parecen" simples y sencillas, pero que esconden
+toneladas de complejidad. (Un post de medium).
+```
+
+---
+
+killing fire with fire.
+
+---
+
+web performance optimization.
+
+code splitting.
+
+dynamic loading. lazy loading.
+
+assets minification. gzip, brotli.
+
+```notes
+Y cómo somos muy de solucionar tecnología con tecnología, ahora lo que está de moda
+es centrarse en la web performance optimization. Oye, que a mí me encanta, lo digo
+en serio. Es de las cosas que me gustan más. Pero no por eso voy a dejar de pensar
+que a lo mejor, en lugar de cargar dinámicamente una imagen que mi pipeline de 
+webpack ha optimizado con un loader especial que he sacado de npm y solamente 
+tarde 2 días en configurar, a lo mejor, solamente a lo mejor, esa mierda de imagen, 
+que es una hero image de esas que decíamos antes, no hace falta ni que esté.
+```
+
+---
+
+(foto de un SUV)
+
+```notes
+Creo que desde fuera nos verían como un grupo de pijos con 4x4 discutiendo
+todo tipo de trucos para gastar menos gasolina.
+"Tienes que deshinchar un poco la rueda delantera derecha". "Lo mejor es
+pintar el techo de color blanco, así, el aire se desliza mejor y el coche es 
+más aerodinámico".
+
+Todo eso es súper interesante y nos da de nuevo problemas a resolver, que es lo
+que nos mola, pero esconde una realidad más profunda.
+```
+
+---
+
+(foto de una bici)
+
+```notes
+Si tienes que ir a por el pan, coge una puñetera bicicleta.
+```
+
+---
+
+## Ads and trackers
+
+```notes
+No todo es culpa nuestra. Ni de los diseñadores. Aquí nosotros y nosotras
+también creamos aplicaciones optimizadas, pensando en el usuario, mimándole desde
+el onboarding hasta que ha conseguido cumplir su objetivo.
+
+Y luego cuando vemos la aplicación online resulta que alguién ha metido 25
+scripts de tracking, anuncios, analítica, botones de mierda para compartir en 
+facebook que ya no usea nadie. ya veis por donde voy.
+```
+
+---
+
+Fuck ads.
+
+Fuck trackers.
+
+```notes
+Por no hablar de principios, que también. Cada puñetera web tiene que saber todo
+lo que hago, lo que no hago, y mandárselo a Google y a Amazon? En serio? En eso
+se ha convertido internet?
+```
+
+---
+
+Internet = Google + Amazon
+
+[Life without Google](https://gizmodo.com/i-cut-google-out-of-my-life-it-screwed-up-everything-1830565500)
+
+[Life without Amazon]((https://gizmodo.com/i-tried-to-block-amazon-from-my-life-it-was-impossible-1830565336))
+
+```notes
+Hace unas semanas un periodista contaba en Gizmodo (5Mb, la paginita) su experiencia
+tras aislarse de Google por completo durante una semana. Se le vino la vida abajo.
+Ni Lyft, ni Uber, ni Spotify, sin fotos en Airbnb. Dropbox no le deja entrar porque
+piensa que es un robot. Se queda también sin articulos en el NYT, porque
+tardan la vida en cargar mientra esperan que le llegue Analytics, Google Pay,
+Google News, Ads, DoubleClick... y Google Fonts :)
+```
+
+---
+
+"Modern OSI Model" (xkcd)
+
+---
+
+## Technology itself
+
+---
+
+(foto embús Xina)
+
+
+```notes
+Esta foto, que parece un atasco de la hostia en China, en realidad es una
+imagen del cable de ADSL en tu casa cuando entras en la landing page del iPad.
+
+just as building new roads increases the amount of traffic on them (ironically 
+increasing overall trip times), increased network performance has encouraged 
+bigger, slower sites. (HI HA ALGUN ESTUDI O DEMO SOBRE EL TEMA?)
+
+A mejor calidad y velocidad de conexión a internet, más margen para añadir mierda
+inecesaria sin que nadie se de cuenta. Imágenes de relleno más grandes. Videos en autoplay.
+Redes rápidas, al final, animan a la gente a meter más "visual fillers".
+
+Solucionaría algo añadir un carril más ahí en China? No. Pues pasa lo mismo con
+internet. Un Internet más rápido está creando un internet más pesado. Y no todo
+el mundo dispone de 600MB de fibra en su casa. Ni siquiera de ADSL.
+```
+
+---
+
+HTTPS 
+
+```notes
+HTTPS es otro ejemplo de como la tecnología a veces nos puede ir en contra. 
+Estaremos todos de acuerdo que HTTPS es evidentmente mejor que HTTP, verdad?
+Seguridad ante todo. Bueno, pues en (buscar info de la noti).
+
+tradeoffs.
+```
+
+---
+
+Us (people making the web).
+
+Ads (people earning money on the web).
+
+Technology (the web itself).
+
+---
+
+# What's next?
+
+---
+
+We need to improve our perspective.
+
+```notes
+Primero de todo, hay que entender que "internet" no es nuestro círculo cercano
+ni nuestra cámara de eco en Twitter. Usas un Mac casi nuevo, iPhone, y te 
+conectas por ADSL de 300mb? Entonces no eres el usuario medio de internet, ni por asomo.
+```
+
+---
+
+Get our priorities straight
+
+```notes
+Revisar prioridades: accessibility first. No es un "nice to have". No es una 
+feature, es un requerimiento no funcional. Igual que la seguridad.
+
+Cuando hablamos de accesibilidad, la gente siempre piensa en contraste de colores,
+tamaño de las fuentes, usar los tags de HTML correctos...todo eso es fundamental.
+A eso quiero añadirle también el peso de nuestras webs. También es un tema de
+accesibilidad.
+```
+
+---
+
+I don't care about bloat because it's inefficient. I care about it because it 
+makes the web **inaccessible**.
+
+```notes
+La web es un medio accesible e inclusivo por defecto. Somos la gente que 
+trabajamos en ella que hacemos todo lo posible para que sea al revés.
+```
+
+---
+
+"pixel perfect"
+
+```notes
+Muerte al pixel perfect. Hay que hacer bien las cosas? Sí, claro. Es siquiera 
+posible diseñar algo "perfecto" para la cantidad de usuarios, necesidades, 
+dispositivos, situaciones, condicionantes...? Nope.
+
+Esta tendría que ser nuestra prioridad. Soy el primero al que le encanta la
+consistencia, los detalles de las interfícies. Jugar con los drop shadows. 
+Las animaciones y los parámetros del cubic bezier y nosequé. Pero también tengo
+claro que todo eso está POR DEBAJO de resolver el puñetero problema a mi usuario
+y dejar que siga con su vida. Hay que ser un poco pragmático.
+
+Si no, lo que demostramos es que estamos en una posición privilegiada. Y lo 
+demostramos porque nos podemos centrar en cosas que... bueno, que realmente no
+importan.
+```
+
+---
+
+You can't create an excellent experience for everyone.
+
+You should aim for an acceptable experience for as much people as possible.
+
+```notes
+No es posible crear una experiencia excelente para todo el mundo.
+
+Nuestro objetivo tiene que ser crear una experiencia decente para tanta gente 
+como sea posible.
+```
+
+---
+
+feature creep.
+
+```notes
+Anecdota LG+webOS.
+https://gigaom.com/2014/08/28/a-failed-experiment-how-lg-screwed-up-its-webos-acquisition/
+```
+
+---
+
+(logo itunes)
+
+```notes
+Y estamos hablando de web, porque es lo que nos ha traído aquí, y es el tema que 
+más me preocupa. Pero el 99% de lo dicho aplica también a otros entornos del
+software.
+
+No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
+de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
+nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
+mientras, eso si, mantienen lleno el backlog del equipo de desarrollo.
+
+Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
+```
+
+---
+
+Pareto's Law and limited resources.
+
+```notes
+Por muy buenas que sean nuestras intenciones, nuestros recursos son limitados. 
+Así que "algo es algo" no sirve de mucho. Conoceréis al amigo Pareto.
+
+Cuando ponemos el foco en mejoras técnicas de rendimiento, en intentar hacer un
+bypass a una dependencia de npm que pesa 12kbs, no estamos poniendo ese foco en
+otras cosas. Nuestros recursos son limitados, con lo que hay que tener en cuenta
+esa famosa ley de pareto.
+
+Anécdota: hace un mes, volviendo del FrontFest, aqui en Madrid, estaba justo 
+preparando esta charla en el AVE. El AVE, como sabréis, en teoría va a 300km/h.
+Pues bueno, durante casi todo el viaje iba a 295, 297, 299... No llegué a ver el 
+300. Y yo pensaba "Joder, si yo fuese ingeniero de trenes o lo que sea, seguro 
+que estaría picado por conseguir que llegase a los 300". 
+Luego, ya en Tarragona, cerca de Barcelona, el puto tren se paró en mitad de 
+ninguna parte. No sé si pasa siempre o qué. Total, que se paró allí, y luego
+estuvimos yendo a 100km/h durante un buen rato.
+
+Saqué hasta foto:
+```
+
+---
+
+(foto tren 100kmh)
+
+```notes
+Imaginad ahora un equipo entero de ingenieros intentando que la velocidad real 
+del bicho sea 300 en lugar de los 298 que marcaba en algun momento. Pa que 
+el tren se pare un rato y luego vaya a 100. Pues eso, prioridades.
+
+Y renfe. Y hablando de renfe:
+```
+
+---
+
+(captura pes web de renfe)
+
+---
+
+Pro tip: how to create a performant website.
+
+```notes
+Y ahora el momento que habéis estado esperando desde el principio: los truquillos
+para que vuestras webs sean más ligeras y carguen y funcionen más rápido. Allá
+va.
+```
+
+---
+
+<ol>
+<Appear>
+<li>Make sure the most important elements of the page are downloaded and rendered
+before anything else.</li>
+<li>Done.</li>
+</Appear>
+</ol>
+
+---
+
+# Takeaways
+
+---
+
+Our internet is fat and bloated.
+
+---
+
+This makes our medium less accessible.
+
+---
+
+We hold responsibility for it.
+
+---
+
+We need to get our priorities straight.
