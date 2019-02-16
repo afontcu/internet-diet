@@ -106,9 +106,7 @@ y publicarlo. Ya os avisaré.
 
 ---
 
-## Us
-
-(devs and designers and product owners and...)
+## Devs and designers
 
 ---
 
@@ -238,6 +236,36 @@ Si tienes que ir a por el pan, coge una puñetera bicicleta.
 
 ---
 
+## Product owners and management
+
+```notes
+la gente "responsable" del proyecto también tiene su parte de culpa.
+
+We face pressure to make these sites bloated. 
+
+I bet if you went to a client and presented a 200 kilobyte site template, 
+you’d be fired. Even if it looked great and somehow included all the tracking 
+and ads and social media crap they insisted on putting in. It’s just so far 
+out of the realm of the imaginable at this point.
+
+vamos a hablar de ello más adelante, pero al final son las personas encargadas
+de definir las prioridades en el proyecto. Y pocas veces esa prioridad significa
+eliminar funcionalidades, reducir tiempos de carga, mejorar la accesibilidad.
+```
+
+---
+
+death by **features**.
+
+```notes
+feature creep.
+
+Anecdota LG+webOS.
+https://gigaom.com/2014/08/28/a-failed-experiment-how-lg-screwed-up-its-webos-acquisition/
+```
+
+---
+
 ## Ads and trackers
 
 ```notes
@@ -286,6 +314,10 @@ Google News, Ads, DoubleClick... y Google Fonts :)
 
 "Modern OSI Model" (xkcd)
 
+```notes
+Internet es menos distribuido de lo que pensamos.
+```
+
 ---
 
 Third party web
@@ -320,6 +352,20 @@ el mundo dispone de 600MB de fibra en su casa. Ni siquiera de ADSL.
 
 ---
 
+(gif pollets)
+
+```notes
+ya sabéis de quién hablo, no?
+npm install. npm no tiene nada de malo. Es una pasada. Ha democratizado el 
+desarrollo web, como tantas otras herramientas y plataformas. Pero claro, es una
+espada de doble filo. Porque ahora, escribes npm install, y tu proyecto pasa a
+tener centenares de dependencias, y ese pasa a ser el punto de partida. webpack
+y demás están haciend un gran trabajo para reducir ese peso y moverlo a tiempo
+de "compilación" en lugar de "ejecución", pero aún así.
+```
+
+---
+
 HTTPS 
 
 ```notes
@@ -344,12 +390,23 @@ Technology (the web itself).
 
 ---
 
-We need to improve our perspective.
+We need to **improve our perspective**.
 
 ```notes
 Primero de todo, hay que entender que "internet" no es nuestro círculo cercano
 ni nuestra cámara de eco en Twitter. Usas un Mac casi nuevo, iPhone, y te 
-conectas por ADSL de 300mb? Entonces no eres el usuario medio de internet, ni por asomo.
+conectas por ADSL de 300mb? Entonces no eres el usuario medio de internet. Y
+me juego algo que tampoco eres el usuario medio de tu web.
+```
+
+---
+
+I don't care about bloat because it's inefficient. I care about it because it 
+**makes the web inaccessible**.
+
+```notes
+La web es un medio accesible e inclusivo por defecto. Somos la gente que 
+trabajamos en ella que hacemos todo lo posible para que sea al revés.
 ```
 
 ---
@@ -368,26 +425,40 @@ accesibilidad.
 
 ---
 
-I don't care about bloat because it's inefficient. I care about it because it 
-**makes the web inaccessible**.
-
-```notes
-La web es un medio accesible e inclusivo por defecto. Somos la gente que 
-trabajamos en ella que hacemos todo lo posible para que sea al revés.
-```
-
----
-
 dead to **pixel perfect**.
 
 ```notes
 Muerte al pixel perfect. Hay que hacer bien las cosas? Sí, claro. Es siquiera 
 posible diseñar algo "perfecto" para la cantidad de usuarios, necesidades, 
 dispositivos, situaciones, condicionantes...? Nope.
+```
+
+---
+
+(puyita a Refactoring UI i companyia?)
+
+```notes
+Véis estos dos botones? Os parecen iguales? Pues no lo son. El de la derecha
+tiene un drop shadow realista, es decir, imita la sombra que haría ese boton
+si fuese real y no píxeles. Esa sombra, además, al pasar el ratón por encima,
+se anima usando una transformación basada en cubic-bezier que le da otra capa
+de realismo.
+```
+
+(imatge amb numeros del contrast)
+
+---
+
+```notes
+Lo bueno de eso? Que está muy bien eso. Pero quizá sería más interesante haber
+mirado si el contraste entre color y fondo es suficiente, y pasa los estándares.
+
+Parece una falsa dicotomía, pero me juego algo a que la mayoría aquí ponemos 
+más foco en el tamaño de la sombra, o el rendondeado de nosequé, que en si el
+elemento es accesible desde un lector de pantallas.
 
 Esta tendría que ser nuestra prioridad. Soy el primero al que le encanta la
-consistencia, los detalles de las interfícies. Jugar con los drop shadows. 
-Las animaciones y los parámetros del cubic bezier y nosequé. Pero también tengo
+consistencia, los detalles de las interfícies. Pero también tengo
 claro que todo eso está POR DEBAJO de resolver el puñetero problema a mi usuario
 y dejar que siga con su vida. Hay que ser un poco pragmático.
 
@@ -402,14 +473,6 @@ You can't create an excellent experience for everyone.
 
 You should aim for an **acceptable** experience for **as much people as possible**.
 
----
-
-feature creep.
-
-```notes
-Anecdota LG+webOS.
-https://gigaom.com/2014/08/28/a-failed-experiment-how-lg-screwed-up-its-webos-acquisition/
-```
 
 ---
 
@@ -495,16 +558,16 @@ before anything else.</li>
 
 ---
 
-Our internet is fat and bloated.
+Our internet is **fat and bloated**.
 
 ---
 
-This makes our medium less accessible.
+This makes our medium **less accessible**.
 
 ---
 
-We hold responsibility for it.
+We hold **responsibility** for it.
 
 ---
 
-We need to get our priorities straight.
+We need to get our **priorities straight**.
