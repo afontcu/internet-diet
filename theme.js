@@ -19,20 +19,10 @@ export default {
   css: {
     ...theme.css,
     textAlign: 'left',
-    // blockquote: {
-    //   paddingLeft: '1em',
-    //   paddingRight: '1em',
-    // },
-    // 'blockquote > p': {
-    //   lineHeight: '1.2',
-    //   fontSize: '1.2em',
-    //   paddingLeft: '2em',
-    //   paddingRight: '2em',
-    // },
-    // 'blockquote + p': {
-    //   paddingRight: '2em',
-    //   textAlign: 'right',
-    // },
+    blockquote: {
+      fontSize: '6rem',
+      fontFamily: titleFont,
+    },
     li: {
       fontFamily: bodyFont,
       fontSize: '1.4em',
