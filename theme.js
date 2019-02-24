@@ -2,8 +2,9 @@ import { future as theme } from 'mdx-deck/themes'
 import style from 'react-syntax-highlighter/styles/prism/ghcolors'
 import scss from 'react-syntax-highlighter/languages/prism/scss'
 
-const bodyFont = 'Merriweather, serif'
+const bodyFont = 'Martel, serif'
 const titleFont = 'Kavoon, serif'
+const mainColor = '#f06c17'
 
 export default {
   ...theme,
@@ -18,20 +19,20 @@ export default {
   css: {
     ...theme.css,
     textAlign: 'left',
-    blockquote: {
-      paddingLeft: '1em',
-      paddingRight: '1em',
-    },
-    'blockquote > p': {
-      lineHeight: '1.2',
-      fontSize: '1.2em',
-      paddingLeft: '2em',
-      paddingRight: '2em',
-    },
-    'blockquote + p': {
-      paddingRight: '2em',
-      textAlign: 'right',
-    },
+    // blockquote: {
+    //   paddingLeft: '1em',
+    //   paddingRight: '1em',
+    // },
+    // 'blockquote > p': {
+    //   lineHeight: '1.2',
+    //   fontSize: '1.2em',
+    //   paddingLeft: '2em',
+    //   paddingRight: '2em',
+    // },
+    // 'blockquote + p': {
+    //   paddingRight: '2em',
+    //   textAlign: 'right',
+    // },
     li: {
       fontFamily: bodyFont,
       fontSize: '1.4em',
@@ -41,6 +42,10 @@ export default {
       borderRadius: '8px',
       boxShadow: '2px 4px 10px rgba(0, 0, 0, 0.3)',
     },
+    strong: {
+      fontWeight: 900,
+      color: mainColor,
+    } 
   },
   heading: {
     textTransform: 'inherit',
