@@ -1,6 +1,5 @@
-import { Image } from 'mdx-deck'
-import { Head } from 'mdx-deck'
-import { Appear } from 'mdx-deck'
+import { Image, Head, Appear } from 'mdx-deck'
+import { Invert } from 'mdx-deck/layouts'
 
 export { default as theme } from './theme'
 
@@ -493,17 +492,19 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 
 ---
 
-Good intentions vs. **Pareto's Law**.
+Good intentions vs. **Pareto's Law**
 
 ```notes
-Por muy buenas que sean nuestras intenciones, nuestros recursos son limitados. 
-Así que "algo es algo" no sirve de mucho. Conoceréis al amigo Pareto.
+Nuestros recursos son limitados.  Así que "algo es algo" no sirve de mucho.
 
 Cuando ponemos el foco en mejoras técnicas de rendimiento, en intentar hacer un
 bypass a una dependencia de npm que pesa 12kbs, no estamos poniendo ese foco en
-otras cosas. Nuestros recursos son limitados, con lo que hay que tener en cuenta
-esa famosa ley de pareto.
+otras cosas. Nuestros recursos son limitados.
+```
 
+---
+
+```notes
 Anécdota: hace un mes, volviendo del FrontFest, aqui en Madrid, estaba justo 
 preparando esta charla en el AVE. El AVE, como sabréis, en teoría va a 300km/h.
 Pues bueno, durante casi todo el viaje iba a 295, 297, 299... No llegué a ver el 
@@ -518,7 +519,9 @@ Saqué hasta foto:
 
 ---
 
-(foto tren 100kmh)
+export default Invert
+
+<Image src="images/ave.jpg" size="contain" />
 
 ```notes
 Imaginad ahora un equipo entero de ingenieros intentando que la velocidad real 
@@ -554,25 +557,9 @@ before anything else.</li>
 
 ---
 
-Size budget.
-
-```notes
-Definirlo a nivel de proyecto. 
-```
-
----
-
-(captura performance budget a github)
-
-```
-Integrarlo con Github?
-```
-
----
-
 Progressive enhancement.
 
-```
+```notes
 Igual que Mobile First hizo que cambiásemos como maquetar webs, pensando primero
 en mobile e ir creciendo a partir de allí, en lugar de hacerlo al revés.
 
@@ -584,35 +571,18 @@ respuesta: se ve un poco diferente, y carga más rápido).
 
 ---
 
-```js
-//how the fuck do I get the network info
-```
-
-```notes
-Desde JS podemos saber información sobre el tipo de conexión de nuestro usuario.
-¿Y si cargamos siempre lo principal de nuestra página, y limitamos los otros
-elementos en función de ese parámetro?
-```
-
----
-
 # Takeaways
 
 ---
 
-Our internet is **fat and bloated**.
-
----
-
-This makes our medium **less accessible**.
-
----
-
-We hold **responsibility** for it.
-
----
-
-We need to get our **priorities straight**.
+<ol>
+  <Appear>
+  <li>Our internet is <strong>fat and bloated</strong>.</li>
+  <li>This makes our medium <strong>less accessible</strong>.</li>
+  <li>We hold <strong>responsibility</strong> for it.</li>
+  <li>We need to get our <strong>priorities straight</strong>.</li>
+  </Appear>
+</ol>
 
 ---
 
@@ -620,5 +590,6 @@ We need to get our **priorities straight**.
 
 What questions do you have?
 
-- **@afontcu_** on Twitter.
-- **afontcu** everywhere else (Medium, Github, pornh... kidding).
+**@afontcu_** on Twitter.
+
+**afontcu** everywhere else (Medium, Github, pornh... kidding).
