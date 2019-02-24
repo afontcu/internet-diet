@@ -517,6 +517,25 @@ accesibilidad.
 
 ---
 
+export default Invert
+
+<Image src="images/refactoring-ui.jpg" size="contain" />
+
+---
+
+export default Invert
+
+<Image src="images/refactoring-fail.png" size="contain" />
+
+```notes
+Falsa dicotomía? No: posición privilegiada
+
+Detalles, perfección está POR DEBAJO de resolver el puñetero problema a mi
+usuario.
+```
+
+---
+
 dead to **pixel perfect**.
 
 ```notes
@@ -527,44 +546,9 @@ dispositivos, situaciones, condicionantes...? Nope.
 
 ---
 
-(puyita a Refactoring UI i companyia?)
-
-```notes
-Véis estos dos botones? Os parecen iguales? Pues no lo son. El de la derecha
-tiene un drop shadow realista, es decir, imita la sombra que haría ese boton
-si fuese real y no píxeles. Esa sombra, además, al pasar el ratón por encima,
-se anima usando una transformación basada en cubic-bezier que le da otra capa
-de realismo.
-```
-
-(imatge amb numeros del contrast)
-
----
-
-```notes
-Lo bueno de eso? Que está muy bien eso. Pero quizá sería más interesante haber
-mirado si el contraste entre color y fondo es suficiente, y pasa los estándares.
-
-Parece una falsa dicotomía, pero me juego algo a que la mayoría aquí ponemos 
-más foco en el tamaño de la sombra, o el rendondeado de nosequé, que en si el
-elemento es accesible desde un lector de pantallas.
-
-Esta tendría que ser nuestra prioridad. Soy el primero al que le encanta la
-consistencia, los detalles de las interfícies. Pero también tengo
-claro que todo eso está POR DEBAJO de resolver el puñetero problema a mi usuario
-y dejar que siga con su vida. Hay que ser un poco pragmático.
-
-Si no, lo que demostramos es que estamos en una posición privilegiada. Y lo 
-demostramos porque nos podemos centrar en cosas que... bueno, que realmente no
-importan.
-```
-
----
-
 You can't create an excellent experience for everyone.
 
 You should aim for an **acceptable** experience for **as much people as possible**.
-
 
 ---
 
@@ -678,11 +662,16 @@ Y renfe. Y hablando de renfe:
 
 ---
 
-(captura pes web de renfe)
+export default Invert
+
+<Image src="images/renfe.png" size="contain" />
 
 ---
 
-Pro tip: how to create a performant website.
+> 2.29 MB
+
+---
+Pro tip: how to create a **performant website**.
 
 ```notes
 Y ahora el momento que habéis estado esperando desde el principio: los truquillos
@@ -694,7 +683,7 @@ va.
 
 <ol>
 <Appear>
-<li>Make sure the most important elements of the page are downloaded and rendered
+<li>Make sure the <strong>most important elements</strong> of the page are downloaded and rendered
 before anything else.</li>
 <li>Done.</li>
 </Appear>
@@ -737,7 +726,7 @@ What questions do you have?
 
 **@afontcu_** on Twitter.
 
-**afontcu** everywhere else (Medium, Github, pornh... kidding).
+**afontcu** everywhere else (Medium, GitHub, pornh... kidding).
 
 ---
 
