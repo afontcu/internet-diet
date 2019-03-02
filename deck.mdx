@@ -30,28 +30,28 @@ Esto significa dos cosas:
 ---
 
 # Adrià Fontcuberta
-@afontcu_
+**@afontcu_**
 
 Software Engineer at Holaluz (👋💡)
 
 ---
 
 # Adrià Fontcuberta
-@afontcu_
+**@afontcu_**
 
 Frontend Developer at Holaluz (👋💡)
 
 ---
 
 # Adrià Fontcuberta
-@afontcu_
+**@afontcu_**
 
 UI Engineer at Holaluz (👋💡)
 
 ---
 
 # Adrià Fontcuberta
-@afontcu_
+**@afontcu_**
 
 Webmaster at Holaluz (👋💡)
 
@@ -61,11 +61,9 @@ obesity **_wat_**?
 
 ```notes
 Entendemos páginas que son prácticamente de texto, para leer algo, consultar 
-información. No hablamos de aplicaciones web complejas (que también daría para
-una charla), sinó del internet público, que debería ser accesible para todo el
-mundo (de forma literal).
-Hablamos de blogs, webs institucionales, páginas de producto, webs corporativas... 
-en fin, ya véis. El 90% de internet (por decir algo).
+información. No apps complejas.
+
+Blogs, noticias, institucionales, de producto, corporativas...
 ```
 
 ---
@@ -349,11 +347,6 @@ la gente "responsable" del proyecto también tiene su parte de culpa.
 
 We face pressure to make these sites bloated. 
 
-I bet if you went to a client and presented a 200 kilobyte site template, 
-you’d be fired. Even if it looked great and somehow included all the tracking 
-and ads and social media crap they insisted on putting in. It’s just so far 
-out of the realm of the imaginable at this point.
-
 vamos a hablar de ello más adelante, pero al final son las personas encargadas
 de definir las prioridades en el proyecto. Y pocas veces esa prioridad significa
 eliminar funcionalidades, reducir tiempos de carga, mejorar la accesibilidad.
@@ -365,14 +358,12 @@ Death by **features**.
 
 ```notes
 feature creep.
-
-Anecdota LG+webOS.
-https://gigaom.com/2014/08/28/a-failed-experiment-how-lg-screwed-up-its-webos-acquisition/
 ```
 
 ---
 
 # #3
+
 Ads and trackers.
 
 ```notes
@@ -388,20 +379,15 @@ esos botones de compartir en Facebook que, sinceramente, creo que ya nadie usa.
 
 ---
 
-export default Invert
-
-<Image src="images/third-party-web.jpeg" size="contain" />
+again. Is it that bad?
 
 ```notes
-HTTP Archive + twice a month, ~4 million sites crawled Lighthouse. Breaks down the total script execution time of each page and attributes the execution to a URL.
-
-Across top ~1 million sites, ~800 origins account for ~65% of all script execution time with the top 100 entities already accounting for ~59%.
-
-
-Total Impact (Total Execution Time) - how many seconds were spent executing their scripts across the web
-
-Average Impact (Average Execution Time) - on average, how many milliseconds were spent executing each script
+¿Hay para tanto o es porque soy un izquierdoso anticorporaciones?
 ```
+
+---
+
+(funny before/after gif)
 
 ---
 
@@ -415,7 +401,19 @@ https://www.theatlantic.com/technology/archive/2015/04/who-will-track-the-intern
 
 ---
 
-> 6.68 MB
+Before:
+
+> 7.15 MB
+
+> 383 requests
+
+---
+
+After:
+
+> 850 KB
+
+> 25 requests
 
 ---
 
@@ -441,6 +439,69 @@ https://token.rubiconproject.com
 https://match.adsrvr.org
 https://ps.eyeota.net
 https://beacon.krxd.net
+```
+
+---
+
+<Image src="images/elpais.png" size="contain" />
+
+```notes
+https://elpais.com/tecnologia/2018/11/02/actualidad/1541151337_859641.html
+```
+
+---
+
+Before:
+
+> 10,30 MB
+
+> 302 requests
+
+---
+
+After: 
+
+> 4,00 MB
+
+> 68 requests
+
+---
+
+<Image src="images/the-verge.png" size="contain" />
+
+```notes
+https://www.theverge.com/2018/12/5/18127230/facebook-data-documents-parliament-deals-zuckerberg
+```
+
+---
+
+Before:
+
+> 6.46 MB
+
+> 281 requests
+
+---
+
+After:
+
+> 1.36 MB
+
+> 26 requests
+
+---
+
+export default Invert
+
+<Image src="images/usa-today.jpg" size="contain" />
+
+
+```notes
+https://twitter.com/fr3ino/status/1000166112615714816
+
+Load time of more than 45 seconds to 3 seconds.
+From 124 (!) JS files to 0.
+From a total of more than 500 requests to 34.
 ```
 
 ---
@@ -538,13 +599,9 @@ trabajamos en ella que hacemos todo lo posible para que sea al revés.
 We should get our **priorities straight**.
 
 ```notes
-Revisar prioridades: accessibility first. No es un "nice to have". No es una 
-feature, es un requerimiento no funcional. Igual que la seguridad.
+Revisar prioridades: accessibility first. No es un "nice to have". Requerimiento no funcional.
 
-Cuando hablamos de accesibilidad, la gente siempre piensa en contraste de colores,
-tamaño de las fuentes, usar los tags de HTML correctos...todo eso es fundamental.
-A eso quiero añadirle también el peso de nuestras webs. También es un tema de
-accesibilidad.
+Accesibilidad también es peso. No solo contraste, tamaño fuentes...
 ```
 
 ---
@@ -666,17 +723,61 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 
 <RandomiTunesLogo size={560} />
 
+```notes
+El 99% de lo dicho aplica también a otros entornos del software.
+
+No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
+de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
+nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
+mientras, eso si, mantienen lleno el backlog del equipo de desarrollo.
+
+Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
+```
+
 ---
 
 <RandomiTunesLogo size={640} />
+
+```notes
+El 99% de lo dicho aplica también a otros entornos del software.
+
+No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
+de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
+nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
+mientras, eso si, mantienen lleno el backlog del equipo de desarrollo.
+
+Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
+```
 
 ---
 
 <RandomiTunesLogo size={800} />
 
+```notes
+El 99% de lo dicho aplica también a otros entornos del software.
+
+No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
+de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
+nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
+mientras, eso si, mantienen lleno el backlog del equipo de desarrollo.
+
+Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
+```
+
 ---
 
 <RandomiTunesLogo size={1300} />
+
+```notes
+El 99% de lo dicho aplica también a otros entornos del software.
+
+No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
+de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
+nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
+mientras, eso si, mantienen lleno el backlog del equipo de desarrollo.
+
+Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
+```
 
 ---
 
@@ -751,7 +852,7 @@ respuesta: se ve un poco diferente, y carga más rápido).
 
 ---
 
-# Takeaways
+Takeaways
 
 ---
 
