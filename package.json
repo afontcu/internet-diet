@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "pdf": "mdx-deck pdf deck.mdx"
+    "pdf": "mdx-deck pdf deck.mdx",
+    "now-build": "mdx-deck build deck.mdx && cp -r images dist/"
   },
   "devDependencies": {
     "mdx-deck": "^1.8.2"
