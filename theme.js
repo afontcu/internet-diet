@@ -20,7 +20,7 @@ export default {
     ...theme.css,
     textAlign: 'left',
     blockquote: {
-      fontSize: '6rem',
+      fontSize: '4rem',
       fontFamily: titleFont,
     },
     li: {
@@ -43,19 +43,11 @@ export default {
   colors: {
     text: '#333',
     background: '#fafafa',
-    link: '#1c7cc2',
   },
   p: {
     fontFamily: bodyFont,
     fontSize: '1.5em',
     lineHeight: '1.4',
-  },
-  link: {
-    textDecoration: 'none',
-    fontSize: '1.6rem',
-    '&:hover': {
-      textDecoration: 'underline',
-    },
   },
   transitionDuration: 0, // disable transitions
 }
