@@ -1,5 +1,6 @@
-import { Image, Head, Appear } from 'mdx-deck'
+import { Image, Head, Appear, Split } from 'mdx-deck'
 import { Invert } from 'mdx-deck/layouts'
+
 import { RandomiTunesLogo } from './Itunes.js'
 
 export { default as theme } from './theme'
@@ -71,12 +72,30 @@ Blogs, noticias, institucionales, de producto, corporativas...
 Hold on, Adri... is it that bad?
 
 ```notes
-Osea, ¿hay para tanto? ¿Hay como para dar una charla en el t3chfest sobre el
-tema?
+¿Hay como para dar una charla en el t3chfest?
 
-Eeehhh... sí.
-Igual se entiende mejor con algunos ejemplos.
+Algunos ejemplos.
 ```
+
+---
+
+export default Invert
+
+<Image src="images/doom.jpg" size="cover" />
+
+---
+
+export default Invert
+
+<Image src="images/doom-gameplay.jpg" size="cover" />
+
+```notes
+Shooter multinivel en primera persona con motor de renderizado 3D, con distintos mapas, sprites de recursos y efectos de sonido.
+```
+
+---
+
+> 2.39 MB
 
 ---
 
@@ -126,6 +145,10 @@ export default Invert
 <Image src="images/tweet-amp.png" size="contain" />
 
 ```notes
+Principal Engineer @ Google
+
+Si Google puede usar esa excusa...
+
 https://twitter.com/cramforce/status/654047824653344772
 ```
 
@@ -149,25 +172,33 @@ https://blog.radware.com/applicationdelivery/wpo/2015/09/deja-vu-all-over-again/
 
 > 9.97 MB
 
-```notes
-Pages keep getting bigger in their total size
-```
-
----
-
 > 80 resources
 
+> 8.28 MB of images
+
 ```notes
-The number of resource requests is increasing dramatically
+"Pages keep getting bigger in their total size"
+
+"The number of resource requests is increasing dramatically"
+
+"Performance takes a hit due to page complexity and large, unoptimized images."
 ```
 
 ---
 
-> 8.28 MB
+<Image src="images/http-archive.png" size="contain" />
 
 ```notes
-Performance takes a hit due to page complexity and large, unoptimized images.
+Estamos en una uni, había que sacar algún gráfico.
+
+https://httparchive.org/reports/state-of-the-web?start=latest&view=list
 ```
+
+---
+
+> 1.8 MB (desktop)
+
+> 1.6 MB (mobile)
 
 ---
 
@@ -188,25 +219,13 @@ Devs and designers.
 We **love** complexity.
 
 ```notes
-Nos encaaaaanta hacernos la vida complicada. Diremos el contrario, diremos que 
-ponemos al usuario en el centro, y que si hemos elegido el último framework de JS
-es porque es la mejor forma de entregar valor y escalar nuestra aplicación y que
-blablabla.
+Diremos que ponemos al usuario en el centro. Último framework = mejor forma de entregar valor.
 
-Y oye, seguramente es verdad. Pero nos encanta estar a la moda. Cuántas más siglas
-use un proyecto, más mola.
+Pero nos encanta estar a la moda.
 
-¿Quién de aquí cree que lo más importante en un proyecto es entregar valor al 
-usuario o cliente, y que las herramientas que usemos deben responder a eso?
+Cuántas más siglas use un proyecto, más mola.
 
-Ahora, sin bajar las manos.
-¿Quién de aquí ha añadido una dependencia, un paquete, un framework, una 
-animación super chula... por el simple hecho que "molaba"?
-
-Está eso mal? Qué va. Pero creo que podemos admitir que, en general, nos gusta
-la complejidad. Y nos gusta porque es a lo que estamos acostumbrados a enfrentarnos.
-Nos dedicamos a resolver problemas, y el rush de dopamina que libera resolver
-algo es directamente proporcional a lo jodido que haya sido. ¿Si o no?
+Está eso mal? Qué va.
 ```
 
 ---
@@ -218,10 +237,8 @@ Hype driven development.
 De qué sirve un proyecto si al terminar no podemos añadir más frameworks en
 LinkedIn?
 
-Tienes una aplicación con 20 usuarios? Yo metería un cluster de kubernetes, y un
-microservicio por usuario. A tomar por saco. Tus backends han preparado un endpoint
-que devuelve una lista de productos? Pero... en REST? Sin GraphQL? Qué pasa, 
-que vivimos en 2017?
+20 usuarios, 20 clusters de kubernetes. Una API en REST i no en GraphQL? qué
+pasa, que estamos en 2017 o qué?
 ```
 
 ---
@@ -230,11 +247,8 @@ que vivimos en 2017?
 
 ```notes
 Ojo, que esto vale igualito para la gente de diseño. 
-Este chiste no es mío, es de Hayden Pickering, pero lo voy a contar igual.
-¿Sabéis por qué a esas imágenes de cabecera se les llaman "Hero Images"?
-Porque es lo que dice el usuario cuando entra a tu web desde su móvil.
-"Joder, me acabas de hacer descargar una imagen inútil de 500kbs desde el móvil.
-Eres mi puto heroe".
+
+Hayden Pickering.
 ```
 
 ---
@@ -255,15 +269,13 @@ Eres mi puto heroe".
 
 Fake simplicity.
 
-
-```notes
-luego están esas webs que "parecen" simples y sencillas, pero que esconden
-toneladas de complejidad. (Un post de medium).
-```
-
 ---
 
 <Image src="images/medium.png" size="contain" />
+
+```notes
+https://medium.com/@afontcu/hola-t3chfest-e40fec134d36
+```
 
 ---
 
@@ -272,6 +284,10 @@ toneladas de complejidad. (Un post de medium).
 ---
 
 <Image src="images/google-domains.png" size="contain" />
+
+```notes
+https://domains.google.com/m/registrar/search?searchTerm=afontcu.dev
+```
 
 ---
 
@@ -285,24 +301,24 @@ Un JS de 5MB y otro de 3.
 
 Killing fire with **fire**.
 
+```notes
+Somos muy de solucionar tecnología con tecnología.
+```
+
 ---
 
 Code splitting.
 
-Synamic loading. Lazy loading.
+Dynamic or lazy loading.
 
 Assets minification.
 
 Compression algorithms.
 
 ```notes
-Y cómo somos muy de solucionar tecnología con tecnología, ahora lo que está de moda
-es centrarse en la web performance optimization. Oye, que a mí me encanta, lo digo
-en serio. Es de las cosas que me gustan más. Pero no por eso voy a dejar de pensar
-que a lo mejor, en lugar de cargar dinámicamente una imagen que mi pipeline de 
-webpack ha optimizado con un loader especial que he sacado de npm y solamente 
-tarde 2 días en configurar, a lo mejor, solamente a lo mejor, esa mierda de imagen, 
-que es una hero image de esas que decíamos antes, no hace falta ni que esté.
+WPO a mi me encanta.
+
+Optimizar pipeline vs. ni cargar la imagen.
 ```
 
 ---
@@ -310,14 +326,17 @@ que es una hero image de esas que decíamos antes, no hace falta ni que esté.
 <Image src="images/hummer.jpg" size="cover" />
 
 ```notes
-Creo que desde fuera nos verían como un grupo de pijos con 4x4 discutiendo
-todo tipo de trucos para gastar menos gasolina.
-"Tienes que deshinchar un poco la rueda delantera derecha". "Lo mejor es
-pintar el techo de color blanco, así, el aire se desliza mejor y el coche es 
-más aerodinámico".
+Grupo de pijos contando trucos.
+
+"Tienes que deshinchar un poco la rueda delantera derecha".
+
+"Lo mejor es pintar el techo de color blanco, así, el aire se desliza mejor 
+y el coche es más aerodinámico".
 
 Todo eso es súper interesante y nos da de nuevo problemas a resolver, que es lo
-que nos mola, pero esconde una realidad más profunda.
+que nos mola.
+
+Esconde una realidad más profunda.
 ```
 
 ---
@@ -334,16 +353,13 @@ Si tienes que ir a por el pan, coge una puñetera bicicleta.
 
 Product Owners
 
-...and other _stakeholders_
+...and other _stakeholders_.
 
 ```notes
-la gente "responsable" del proyecto también tiene su parte de culpa.
+Presión por hacer sites obesos.
 
-We face pressure to make these sites bloated. 
-
-vamos a hablar de ello más adelante, pero al final son las personas encargadas
-de definir las prioridades en el proyecto. Y pocas veces esa prioridad significa
-eliminar funcionalidades, reducir tiempos de carga, mejorar la accesibilidad.
+Es más fácil explicar que añades funcionalidades que no que las quitas. 
+Nos lleva a...
 ```
 
 ---
@@ -356,32 +372,39 @@ feature creep.
 
 ---
 
-# #3
 
-Ads and trackers.
+## #4
+
+Technology itself.
+
+---
+
+export default Invert
+
+<Image src="images/los-angeles.png" size="100" />
+
 
 ```notes
-No todo es culpa nuestra. Aquí seguro mucha gente se esfuerza en crear webs y
-aplicaciones optimizadas. Nos preocupamos por el usuario, casi siempre.
+Demanda Inducida, Paradoja de Braess, paradoja de Jevos:
 
-Pero no somos los únicos con algo que decir. Alguien va a querer ganar dinero
-con eso que hemos hecho, así que hay que añadir anuncios. Además, en diseño
-van a querer saber como van las nuevas landing pages, así que habrá que añadir
-google analytics y hotjar y optimizely. Y los de marketing van a querer meter
-esos botones de compartir en Facebook que, sinceramente, creo que ya nadie usa.
+A medida que el perfeccionamiento tecnológico aumenta la eficiencia con la que se usa un recurso, es más probable un aumento del consumo de dicho recurso que una disminución.
+
+Más margen para añadir visual fillers. Videos en autoplay. Nos preocupa menos.
 ```
 
 ---
 
-again. Is it that bad?
+# #4
+
+Ads and trackers.
+
+---
+
+Again. Is it that bad?
 
 ```notes
 ¿Hay para tanto o es porque soy un izquierdoso anticorporaciones?
 ```
-
----
-
-(funny before/after gif)
 
 ---
 
@@ -395,17 +418,17 @@ https://www.theatlantic.com/technology/archive/2015/04/who-will-track-the-intern
 
 Before:
 
-> 7.15 MB
+> 6.42 MB
 
-> 383 requests
+> 265 requests
 
 ---
 
 After:
 
-> 850 KB
+> 1,3 MB
 
-> 25 requests
+> 32 requests
 
 ---
 
@@ -445,7 +468,7 @@ https://elpais.com/tecnologia/2018/11/02/actualidad/1541151337_859641.html
 
 Before:
 
-> 10,30 MB
+> 10.30 MB
 
 > 302 requests
 
@@ -453,9 +476,9 @@ Before:
 
 After: 
 
-> 4,00 MB
+> 3.63 MB
 
-> 68 requests
+> 67 requests
 
 ---
 
@@ -469,7 +492,7 @@ https://www.theverge.com/2018/12/5/18127230/facebook-data-documents-parliament-d
 
 Before:
 
-> 6.46 MB
+> 6.26 MB
 
 > 281 requests
 
@@ -498,19 +521,18 @@ From a total of more than 500 requests to 34.
 
 ---
 
-Internet = Google + Amazon
-
----
-
 <Image src="images/gizmodo.png" size="contain" />
 
 
 ```notes
+https://gizmodo.com/i-cut-google-out-of-my-life-it-screwed-up-everything-1830565500
+https://gizmodo.com/i-tried-to-block-amazon-from-my-life-it-was-impossible-1830565336
+
 Google:  Lyft, Uber, YELP!, Spotify, Airbnb (fotos). Dropbox login.
 Internet lento hasta timeout de servicios (Ads, fonts, analytics).
 100k peticiones en una semana.
 
-Amazon: block 23M IPSs. Runkeeper, Yelp, NETFLIX i HBO Go!
+Amazon: block 23M IPs. Runkeeper, Yelp, NETFLIX i HBO Go!
 300k peticiones en una semana.
 
 Internet es menos distribuido de lo que parece.
@@ -524,32 +546,16 @@ Internet es menos distribuido de lo que parece.
 
 ---
 
-## #4
+Internet = Google + Amazon
 
-Technology itself
-
----
-
-export default Invert
-
-<Image src="images/los-angeles.png" size="100" />
-
+It's all about the **business model**.
 
 ```notes
-Esta foto, que parece un atasco de la hostia en Los Angeles, en realidad es una imagen del cable de ADSL en tu casa cuando entras en la landing page del iPad.
+Tenemos que hablar del contexto donde las páginas engordan.
 
-Demanda Inducida, Paradoja de Braess:
-Tras aumentar el suministro de un bien, se consume más.
+Beneficios por anuncios solamente a grandes corporaciones, no al resto.
 
-Más margen para añadir visual fillers. Videos en autoplay.
-```
-
----
-
-Jevons paradox.
-
-```notes
-A medida que el perfeccionamiento tecnológico aumenta la eficiencia con la que se usa un recurso, es más probable un aumento del consumo de dicho recurso que una disminución.
+Problemas estructurales que nos llevan a estos dramas.
 ```
 
 ---
@@ -569,10 +575,11 @@ What's next? Are we doomed?
 We need to **improve our perspective**.
 
 ```notes
-Primero de todo, hay que entender que "internet" no es nuestro círculo cercano
-ni nuestra cámara de eco en Twitter. Usas un Mac casi nuevo, iPhone, y te 
-conectas por ADSL de 300mb? Entonces no eres el usuario medio de internet. Y
-me juego algo que tampoco eres el usuario medio de tu web.
+Primero de todo, hay que entender que "internet" no es nuestro círculo cercano ni nuestra cámara de eco en Twitter. 
+
+¿Quién usa Mac, iPhone, ADSL?
+Entonces no eres el usuario medio de internet. 
+Y me juego algo que tampoco eres el usuario medio de tu web.
 ```
 
 ---
@@ -582,8 +589,9 @@ I don't care about bloat because it's inefficient.
 I care about it because it **makes the web inaccessible**.
 
 ```notes
-La web es un medio accesible e inclusivo por defecto. Somos la gente que 
-trabajamos en ella que hacemos todo lo posible para que sea al revés.
+La web es un medio accesible e inclusivo por defecto.
+
+Somos la gente que trabajamos en ella que hacemos todo lo posible para que sea al revés.
 ```
 
 ---
@@ -600,7 +608,7 @@ Accesibilidad también es peso. No solo contraste, tamaño fuentes...
 
 export default Invert
 
-<Image src="images/refactoring-ui.jpg" size="contain" />
+<Image src="images/refactoring-ui.jpg" size="cover" />
 
 ```notes
 Adam Wathan (creador Tailwind) & Steve Schoger.
@@ -636,9 +644,9 @@ usuario.
 dead to **pixel perfect**.
 
 ```notes
-Muerte al pixel perfect. Hay que hacer bien las cosas? Sí, claro. Es siquiera 
-posible diseñar algo "perfecto" para la cantidad de usuarios, necesidades, 
-dispositivos, situaciones, condicionantes...? Nope.
+Muerte al pixel perfect.
+
+No es posible diseñar algo "perfecto" para la cantidad de usuarios, necesidades, dispositivos...
 ```
 
 ---
@@ -655,24 +663,9 @@ El 99% de lo dicho aplica también a otros entornos del software.
 
 ---
 
-<RandomiTunesLogo size={250} />
-
-```notes
-No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
-de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
-nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
-mientras, eso si, mantienen lleno el backlog del equipo de desarrollo.
-
-Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
-```
-
----
-
 <RandomiTunesLogo size={340} />
 
 ```notes
-El 99% de lo dicho aplica también a otros entornos del software.
-
 No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
 de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
 nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
@@ -686,8 +679,6 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 <RandomiTunesLogo size={400} />
 
 ```notes
-El 99% de lo dicho aplica también a otros entornos del software.
-
 No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
 de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
 nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
@@ -701,8 +692,6 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 <RandomiTunesLogo size={480} />
 
 ```notes
-El 99% de lo dicho aplica también a otros entornos del software.
-
 No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
 de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
 nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
@@ -716,8 +705,6 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 <RandomiTunesLogo size={560} />
 
 ```notes
-El 99% de lo dicho aplica también a otros entornos del software.
-
 No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
 de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
 nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
@@ -731,8 +718,6 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 <RandomiTunesLogo size={640} />
 
 ```notes
-El 99% de lo dicho aplica también a otros entornos del software.
-
 No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
 de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
 nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
@@ -746,8 +731,6 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 <RandomiTunesLogo size={800} />
 
 ```notes
-El 99% de lo dicho aplica también a otros entornos del software.
-
 No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
 de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
 nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
@@ -761,8 +744,6 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 <RandomiTunesLogo size={1300} />
 
 ```notes
-El 99% de lo dicho aplica también a otros entornos del software.
-
 No voy a entrar en detalles, ni señalar con el dedo a nadie, pero hay un montón 
 de aplicaciones que no paran de crecer y crecer, añadir funcionalidades que 
 nadie les ha pedido, y que solamente empeoran la experiencia del usuario 
@@ -790,9 +771,7 @@ export default Invert
 <Image src="images/ave.jpg" size="contain" />
 
 ```notes
-Imaginad ahora un equipo entero de ingenieros intentando que la velocidad real 
-del bicho sea 300 en lugar de los 298 que marcaba en algun momento. Pa que 
-el tren se pare un rato y luego vaya a 100. Pues eso, prioridades.
+Imaginad ahora un equipo entero de ingenieros para ir de 295 a 300
 
 Y renfe. Y hablando de renfe:
 ```
@@ -806,25 +785,6 @@ Y renfe. Y hablando de renfe:
 > 2.29 MB
 
 ---
-Pro tip: how to create a **performant website**.
-
-```notes
-Y ahora el momento que habéis estado esperando desde el principio: los truquillos
-para que vuestras webs sean más ligeras y carguen y funcionen más rápido. Allá
-va.
-```
-
----
-
-<ol>
-<Appear>
-<li>Make sure the <strong>most important elements</strong> of the page are downloaded and rendered
-before anything else.</li>
-<li>Done.</li>
-</Appear>
-</ol>
-
----
 
 Do you remember mobile first?
 
@@ -834,10 +794,10 @@ Now it's time for **Progressive Enhancement**.
 Igual que Mobile First hizo que cambiásemos como maquetar webs, pensando primero
 en mobile e ir creciendo a partir de allí, en lugar de hacerlo al revés.
 
-Empezar a desarrollar una web suponiendo el peor de los casos (bueno, el más 
-limitante). Cómo se ve tu web sin JavaScript? Cómo se ve si el navegador no soporta
-CSS Grid? Cómo se ve si las fuentes de Google Fonts no cargan? (De esa sé la
-respuesta: se ve un poco diferente, y carga más rápido).
+Empezar a desarrollar una web suponiendo el peor de los casos (bueno, el más limitante).
+
+En offline? Sin JavaScript? Sin capacidades modernas como CSS Grid?
+Si Google Fonts carga? (spoiler)
 ```
 
 ---
@@ -869,12 +829,12 @@ What questions do you have?
 
 ## Resources
 
-[Life without Google - Gizmodo](https://gizmodo.com/i-cut-google-out-of-my-life-it-screwed-up-everything-1830565500)
-
-[Life without Amazon - Gizmodo]((https://gizmodo.com/i-tried-to-block-amazon-from-my-life-it-was-impossible-1830565336))
-
 [The Ethics of Web Performance - Tim Kadlec](https://timkadlec.com/remembers/2019-01-09-the-ethics-of-performance/)
 
 [Third Party Web](https://github.com/patrickhulce/third-party-web)
+
+[How 3rd Party Trackers Impact the Performance of the World’s Top News Sites](https://royal.pingdom.com/trackers-impact-performance/)
+
+[The "Average Page" is a myth](https://www.igvita.com/2016/01/12/the-average-page-is-a-myth/)
 
 
