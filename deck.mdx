@@ -1,6 +1,7 @@
 import { Image, Head, Appear, Split } from 'mdx-deck'
 import { Invert } from 'mdx-deck/layouts'
 
+import { PokemonScale } from './PokemonScale.js'
 import { RandomiTunesLogo } from './Itunes.js'
 
 export { default as theme } from './theme'
@@ -87,7 +88,7 @@ export default Invert
 
 export default Invert
 
-<Image src="images/doom-gameplay.jpg" size="cover" />
+<Image src="images/doom.gif" size="cover" />
 
 ```notes
 Shooter multinivel en primera persona con motor de renderizado 3D, con distintos mapas, sprites de recursos y efectos de sonido.
@@ -96,6 +97,22 @@ Shooter multinivel en primera persona con motor de renderizado 3D, con distintos
 ---
 
 > 2.39 MB
+
+---
+
+export default Invert
+
+<Image src="images/pokemon-blue.jpg" size="contain" />
+
+---
+
+export default Invert
+
+<Image src="images/pokemon-gameplay.gif" size="contain" />
+
+---
+
+> 1.00 MB
 
 ---
 
@@ -118,6 +135,8 @@ internet services that are included.
 
 > 2.76 MB
 
+<PokemonScale weight={2.76} />
+
 ---
 
 <Image src="images/ampproject.png" size="contain" />
@@ -137,6 +156,8 @@ Google competencia a Instant Pages de Facebook.
 ---
 
 > 2.21 MB
+
+<PokemonScale weight={2.21} />
 
 ```notes
 Mejora increible comparado con la primera versión (vídeo infinito)
@@ -167,6 +188,8 @@ https://www.apple.com/es/ios/ios-12/
 ---
 
 > 32.63 MB
+
+<PokemonScale weight={32.63} size={50} />
 
 ---
 
@@ -206,7 +229,13 @@ https://httparchive.org/reports/state-of-the-web?start=latest&view=list
 
 > 1.8 MB (desktop)
 
-> 1.6 MB (mobile)
+<PokemonScale weight={1.8} />
+
+---
+
+> 1.6 MB (desktop)
+
+<PokemonScale weight={1.6} />
 
 ---
 
@@ -289,6 +318,8 @@ https://medium.com/@afontcu/hola-t3chfest-e40fec134d36
 
 > 3.01 MB
 
+<PokemonScale weight={3.01} />
+
 ---
 
 <Image src="images/google-domains.png" size="contain" />
@@ -300,6 +331,8 @@ https://domains.google.com/m/registrar/search?searchTerm=afontcu.dev
 ---
 
 > 11.78 MB
+
+<PokemonScale weight={11.78} size={80} />
 
 ```notes
 Un JS de 5MB y otro de 3.
@@ -428,7 +461,7 @@ https://www.theatlantic.com/technology/archive/2015/04/who-will-track-the-intern
 
 ---
 
-Before:
+Without blocking ad/trackers:
 
 > 6.42 MB
 
@@ -436,7 +469,7 @@ Before:
 
 ---
 
-After:
+Blocking ad/trackers:
 
 > 1,3 MB
 
@@ -478,7 +511,7 @@ https://elpais.com/tecnologia/2018/11/02/actualidad/1541151337_859641.html
 
 ---
 
-Before:
+Without blocking ad/trackers:
 
 > 10.30 MB
 
@@ -486,7 +519,7 @@ Before:
 
 ---
 
-After: 
+Blocking ad/trackers: 
 
 > 3.63 MB
 
@@ -502,7 +535,7 @@ https://www.theverge.com/2018/12/5/18127230/facebook-data-documents-parliament-d
 
 ---
 
-Before:
+Without blocking ad/trackers:
 
 > 6.26 MB
 
@@ -510,7 +543,7 @@ Before:
 
 ---
 
-After:
+Blocking ad/trackers:
 
 > 1.36 MB
 
@@ -529,6 +562,20 @@ https://twitter.com/fr3ino/status/1000166112615714816
 Load time of more than 45 seconds to 3 seconds.
 From 124 (!) JS files to 0.
 From a total of more than 500 requests to 34.
+```
+
+---
+
+Internet = Google + Amazon
+
+It's all about the **business model**.
+
+```notes
+Tenemos que hablar del contexto donde las páginas engordan.
+
+Beneficios por anuncios solamente a grandes corporaciones, no al resto.
+
+Problemas estructurales que nos llevan a estos dramas.
 ```
 
 ---
@@ -556,27 +603,15 @@ Internet es menos distribuido de lo que parece.
 
 > 116 requests
 
----
-
-Internet = Google + Amazon
-
-It's all about the **business model**.
-
-```notes
-Tenemos que hablar del contexto donde las páginas engordan.
-
-Beneficios por anuncios solamente a grandes corporaciones, no al resto.
-
-Problemas estructurales que nos llevan a estos dramas.
-```
+<PokemonScale weight={19.76} size={50} />
 
 ---
 
 **Us** (people making the web).
 
-**Ads and trackers** (people making money on it).
-
 **Technology** (the web itself).
+
+**Ads/trackers** (people making money from it).
 
 ---
 
@@ -647,17 +682,17 @@ usuario.
 
 > 466 KB 👍
 
+<PokemonScale weight={0.466} />
+
 ```notes
 ...aunque 362KB con el modo de privacidad de Firefox
 ```
 
 ---
 
-dead to **pixel perfect**.
+Dead to **pixel perfect**.
 
 ```notes
-Muerte al pixel perfect.
-
 No es posible diseñar algo "perfecto" para la cantidad de usuarios, necesidades, dispositivos...
 ```
 
@@ -665,7 +700,25 @@ No es posible diseñar algo "perfecto" para la cantidad de usuarios, necesidades
 
 You can't create an excellent experience for everyone.
 
-You should aim for an **acceptable** experience for **as much people as possible**.
+You should aim for an **acceptable** experience for **as many people as possible**.
+
+---
+
+How?
+
+Do you remember mobile first?
+
+Now it's time for **Progressive Enhancement**.
+
+```notes
+Igual que Mobile First hizo que cambiásemos como maquetar webs, pensando primero
+en mobile e ir creciendo a partir de allí, en lugar de hacerlo al revés.
+
+Empezar a desarrollar una web suponiendo el peor de los casos (el más limitante).
+
+En offline? Sin JavaScript? Sin capacidades modernas como CSS Grid?
+Si Google Fonts carga? (spoiler)
+```
 
 ---
 
@@ -769,18 +822,16 @@ Hay ejemplos, pero ya os digo, no quiero señalar a nadie.
 Good intentions vs. **Pareto's Law**.
 
 ```notes
-Nuestros recursos son limitados.  Así que "algo es algo" no sirve de mucho.
+Vale, me has convencido.
 
-Anécdota FrontFest.
+Pero nuestros recursos son limitados.
 
-Saqué hasta foto:
+Así que "algo es algo" no sirve de mucho.
 ```
 
 ---
 
-export default Invert
-
-<Image src="images/ave.jpg" size="contain" />
+<Image src="images/ave.jpg" size="cover" />
 
 ```notes
 Imaginad ahora un equipo entero de ingenieros para ir de 295 a 300
@@ -794,23 +845,9 @@ Y renfe. Y hablando de renfe:
 
 ---
 
+<PokemonScale weight={2.29} />
+
 > 2.29 MB
-
----
-
-Do you remember mobile first?
-
-Now it's time for **Progressive Enhancement**.
-
-```notes
-Igual que Mobile First hizo que cambiásemos como maquetar webs, pensando primero
-en mobile e ir creciendo a partir de allí, en lugar de hacerlo al revés.
-
-Empezar a desarrollar una web suponiendo el peor de los casos (bueno, el más limitante).
-
-En offline? Sin JavaScript? Sin capacidades modernas como CSS Grid?
-Si Google Fonts carga? (spoiler)
-```
 
 ---
 
@@ -831,7 +868,7 @@ Takeaways
 
 # Thanks! 👋
 
-What questions do you have?
+[https://internet-diet.now.sh](https://internet-diet.now.sh)
 
 **@afontcu_** on Twitter.
 
@@ -841,7 +878,7 @@ What questions do you have?
 
 ## Resources
 
-[The Ethics of Web Performance - Tim Kadlec](https://timkadlec.com/remembers/2019-01-09-the-ethics-of-performance/)
+[The Ethics of Web Performance](https://timkadlec.com/remembers/2019-01-09-the-ethics-of-performance/)
 
 [Third Party Web](https://github.com/patrickhulce/third-party-web)
 
@@ -849,4 +886,19 @@ What questions do you have?
 
 [The "Average Page" is a myth](https://www.igvita.com/2016/01/12/the-average-page-is-a-myth/)
 
+---
+
+## Moar resources
+
+[What is Progressive Enhancement and Why Should You Care?](https://www.shopify.com/partners/blog/what-is-progressive-enhancement-and-why-should-you-care)
+
+[You Won’t Believe What Happens Next](https://laurakalbag.com/you-wont-believe-what-happens-next/)
+
+[The Cult of the Complex](https://alistapart.com/article/cult-of-the-complex)
+
+---
+
+[Adrià Fontcuberta](https://twitter.com/afontcu_), march 2019.
+
+A repo for the slides is available [here](http://github.com/afontcu/internet-diet).
 
