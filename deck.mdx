@@ -1,7 +1,6 @@
 import { Image, Head, Appear, Split } from 'mdx-deck'
 import { Invert } from 'mdx-deck/layouts'
 
-import { PokemonScale } from './PokemonScale.js'
 import { RandomiTunesLogo } from './Itunes.js'
 
 export { default as theme } from './theme'
@@ -13,10 +12,10 @@ export { default as theme } from './theme'
 
 ---
 
-according to most neuroscience studies, 80% of the population agrees that
+According to most neuroscience studies, 80% of the population agrees that
 their number one fear is **public speaking**.
 
-number two is **death**.
+Number two is **death**.
 
 ```notes
 Esto significa dos cosas:
@@ -31,12 +30,16 @@ Esto significa dos cosas:
 
 ---
 
+export default Invert
+
 # Adrià Fontcuberta
 @afontcu_
 
 Software Engineer at Holaluz (👋💡)
 
 ---
+
+export default Invert
 
 # Adrià Fontcuberta
 @afontcu_
@@ -45,12 +48,16 @@ Frontend Developer at Holaluz (👋💡)
 
 ---
 
+export default Invert
+
 # Adrià Fontcuberta
 @afontcu_
 
 UI Engineer at Holaluz (👋💡)
 
 ---
+
+export default Invert
 
 # Adrià Fontcuberta
 @afontcu_
@@ -70,7 +77,7 @@ Blogs, noticias, institucionales, de producto, corporativas...
 
 ---
 
-Hold on, Adri... is it that bad?
+Hold on, Adri... is it **that** bad?
 
 ```notes
 ¿Hay como para dar una charla en el t3chfest?
@@ -135,8 +142,6 @@ internet services that are included.
 
 > 2.76 MB
 
-<PokemonScale weight={2.76} />
-
 ---
 
 <Image src="images/ampproject.png" size="contain" />
@@ -156,8 +161,6 @@ Google competencia a Instant Pages de Facebook.
 ---
 
 > 2.21 MB
-
-<PokemonScale weight={2.21} />
 
 ```notes
 Mejora increible comparado con la primera versión (vídeo infinito)
@@ -188,8 +191,6 @@ https://www.apple.com/es/ios/ios-12/
 ---
 
 > 32.63 MB
-
-<PokemonScale weight={32.63} size={50} />
 
 ---
 
@@ -222,24 +223,17 @@ https://blog.radware.com/applicationdelivery/wpo/2015/09/deja-vu-all-over-again/
 ```notes
 Estamos en una uni, había que sacar algún gráfico.
 
+1.8MB mediana desktop
+1.6MB mediana mobile
+
 https://httparchive.org/reports/state-of-the-web?start=latest&view=list
 ```
 
 ---
 
-> 1.8 MB (desktop)
+So...
 
-<PokemonScale weight={1.8} />
-
----
-
-> 1.6 MB (desktop)
-
-<PokemonScale weight={1.6} />
-
----
-
-Who fed the Internet?
+**Who** fed the Internet?
 
 ```notes
 ¿Por qué hemos llegado aquí? ¿Quién o quiénes son responsables de esta situación?
@@ -318,8 +312,6 @@ https://medium.com/@afontcu/hola-t3chfest-e40fec134d36
 
 > 3.01 MB
 
-<PokemonScale weight={3.01} />
-
 ---
 
 <Image src="images/google-domains.png" size="contain" />
@@ -331,8 +323,6 @@ https://domains.google.com/m/registrar/search?searchTerm=afontcu.dev
 ---
 
 > 11.78 MB
-
-<PokemonScale weight={11.78} size={80} />
 
 ```notes
 Un JS de 5MB y otro de 3.
@@ -361,10 +351,6 @@ WPO a mi me encanta.
 
 Optimizar pipeline vs. ni cargar la imagen.
 ```
-
----
-
-<Image src="images/crazy-man.jpg" size="cover" />
 
 ---
 
@@ -405,6 +391,8 @@ Presión por hacer sites obesos.
 
 Es más fácil explicar que añades funcionalidades que no que las quitas. 
 Nos lleva a...
+
+next feature over improving things like performance or accessibility or security.
 ```
 
 ---
@@ -428,9 +416,8 @@ export default Invert
 
 <Image src="images/los-angeles.png" size="100" />
 
-
 ```notes
-Demanda Inducida, Paradoja de Braess, paradoja de Jevos:
+Induced demand.
 
 A medida que el perfeccionamiento tecnológico aumenta la eficiencia con la que se usa un recurso, es más probable un aumento del consumo de dicho recurso que una disminución.
 
@@ -445,10 +432,14 @@ Ads and trackers.
 
 ---
 
-Again. Is it that bad?
+Again. Is it **that** bad?
+
+---
+
+<Image src="images/before-after.jpg" size="contain" />
 
 ```notes
-¿Hay para tanto o es porque soy un izquierdoso anticorporaciones?
+referentes, millenial.
 ```
 
 ---
@@ -461,7 +452,7 @@ https://www.theatlantic.com/technology/archive/2015/04/who-will-track-the-intern
 
 ---
 
-Without blocking ad/trackers:
+Without blocking ads/trackers:
 
 > 6.42 MB
 
@@ -469,37 +460,11 @@ Without blocking ad/trackers:
 
 ---
 
-Blocking ad/trackers:
+Blocking ads/trackers:
 
-> 1,3 MB
+> 1.3 MB <span>(-80%)</span>
 
-> 32 requests
-
----
-
-export default Invert
-
-```
-https://ping.chartbeat.net
-https://srv-2019-03-01-19.pixel.parsely.com
-https://pixel.keywee.co
-https://edge.simplereach.com
-https://aax-eu.amazon-adsystem.com
-https://pagead2.googlesyndication.com
-https://googleads.g.doubleclick.net
-https://image6.pubmatic.com
-https://a.tribalfusion.com
-https://rp.gwallet.com
-https://pm.w55c.net
-https://cookie.brealtime.com
-https://ml314.com
-https://theatlantic.blueconic.net
-https://pixel.quantserve.com
-https://token.rubiconproject.com
-https://match.adsrvr.org
-https://ps.eyeota.net
-https://beacon.krxd.net
-```
+> 32 requests <span>(-88%)</span>
 
 ---
 
@@ -511,7 +476,7 @@ https://elpais.com/tecnologia/2018/11/02/actualidad/1541151337_859641.html
 
 ---
 
-Without blocking ad/trackers:
+Without blocking ads/trackers:
 
 > 10.30 MB
 
@@ -519,11 +484,11 @@ Without blocking ad/trackers:
 
 ---
 
-Blocking ad/trackers: 
+Blocking ads/trackers: 
 
-> 3.63 MB
+> 3.63 MB <span>(-65%)</span>
 
-> 67 requests
+> 67 requests <span>(-78%)</span>
 
 ---
 
@@ -535,7 +500,7 @@ https://www.theverge.com/2018/12/5/18127230/facebook-data-documents-parliament-d
 
 ---
 
-Without blocking ad/trackers:
+Without blocking ads/trackers:
 
 > 6.26 MB
 
@@ -543,11 +508,11 @@ Without blocking ad/trackers:
 
 ---
 
-Blocking ad/trackers:
+Blocking ads/trackers:
 
-> 1.36 MB
+> 1.36 MB <span>(-78%)</span>
 
-> 26 requests
+> 26 requests <span>(-90%)</span>
 
 ---
 
@@ -566,7 +531,9 @@ From a total of more than 500 requests to 34.
 
 ---
 
-Internet = Google + Amazon
+What is wrong with these people?
+
+---
 
 It's all about the **business model**.
 
@@ -577,6 +544,12 @@ Beneficios por anuncios solamente a grandes corporaciones, no al resto.
 
 Problemas estructurales que nos llevan a estos dramas.
 ```
+
+---
+
+Ads = Google + Facebook
+
+Internet = Google + Amazon
 
 ---
 
@@ -603,15 +576,13 @@ Internet es menos distribuido de lo que parece.
 
 > 116 requests
 
-<PokemonScale weight={19.76} size={50} />
-
 ---
 
-**Us** (people making the web).
+**Us** — People making the web.
 
-**Technology** (the web itself).
+**Technology** — The web itself.
 
-**Ads/trackers** (people making money from it).
+**Ads/trackers** — People making money from it.
 
 ---
 
@@ -639,6 +610,16 @@ I care about it because it **makes the web inaccessible**.
 La web es un medio accesible e inclusivo por defecto.
 
 Somos la gente que trabajamos en ella que hacemos todo lo posible para que sea al revés.
+```
+
+---
+
+Poor performance leads to **exclusion**.
+
+```notes
+Cada vez más distancia entre dispositivos top y dispositivos medios.
+
+No solamente descarga, sinó lo que viene detrás: JS (con lo que supone para la CPU).
 ```
 
 ---
@@ -682,8 +663,6 @@ usuario.
 
 > 466 KB 👍
 
-<PokemonScale weight={0.466} />
-
 ```notes
 ...aunque 362KB con el modo de privacidad de Firefox
 ```
@@ -704,7 +683,19 @@ You should aim for an **acceptable** experience for **as many people as possible
 
 ---
 
-How?
+So... Are you thinking of underdeveloped countries?
+
+---
+
+Yep. You **are** thinking of underdeveloped countries.
+
+---
+
+Have you ever used a mobile phone in the subway? On a train?
+
+On 3G??
+
+---
 
 Do you remember mobile first?
 
@@ -831,7 +822,9 @@ Así que "algo es algo" no sirve de mucho.
 
 ---
 
-<Image src="images/ave.jpg" size="cover" />
+export default Invert
+
+<Image src="images/ave.jpg" size="contain" />
 
 ```notes
 Imaginad ahora un equipo entero de ingenieros para ir de 295 a 300
@@ -844,8 +837,6 @@ Y renfe. Y hablando de renfe:
 <Image src="images/renfe.png" size="contain" />
 
 ---
-
-<PokemonScale weight={2.29} />
 
 > 2.29 MB
 
@@ -872,7 +863,7 @@ Takeaways
 
 **@afontcu_** on Twitter.
 
-**afontcu** everywhere else (Medium, GitHub, pornh... kidding).
+**afontcu** everywhere else.
 
 ---
 
@@ -896,9 +887,6 @@ Takeaways
 
 [The Cult of the Complex](https://alistapart.com/article/cult-of-the-complex)
 
----
+[Heydon Pickering- Getting your priorities straight](https://www.youtube.com/watch?v=MZfZO9mTKpU)
 
-[Adrià Fontcuberta](https://twitter.com/afontcu_), march 2019.
-
-A repo for the slides is available [here](http://github.com/afontcu/internet-diet).
-
+[Page Weight Matters](http://blog.chriszacharias.com/page-weight-matters)
