@@ -23,6 +23,9 @@ export default {
       fontSize: '4rem',
       fontFamily: titleFont,
     },
+    a: {
+      fontSize: '0.6em'
+    },
     li: {
       fontFamily: bodyFont,
       fontSize: '1.4em',
@@ -35,7 +38,12 @@ export default {
     strong: {
       fontWeight: 900,
       color: mainColor,
-    } 
+    },
+    'blockquote span': {
+      color: 'green',
+      letterSpacing: '-0.3rem',
+      fontSize: '0.6em'
+    },
   },
   heading: {
     textTransform: 'inherit',
