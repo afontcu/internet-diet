@@ -7,6 +7,6 @@
     "now-build": "mdx-deck build deck.mdx && cp -r images dist/"
   },
   "devDependencies": {
-    "mdx-deck": "^1.8.2"
+    "mdx-deck": "^1.10.2"
   }
 }
